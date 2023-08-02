@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <main>
       <NavBar />
-      <div className='min-h-[89.3vh]'>
-      <div className='flex flex-col items-center justify-center'>
-        <Image src={main} alt='main' width={1200} height={1200} />
+      <div className='min-h-[89.3vh] flex flex-col items-center justify-center'>
+      <div className='container flex flex-col items-center justify-center self-center'>
+        <Image src={main} alt='main' width={1300} height={1000}/>
       </div>
       </div>
     </main>

@@ -6,7 +6,7 @@ export default function NavBar() {
 
         <nav className="bg-[#ffd700]">
             <div className="items-center justify-between flex flex-row">
-                <div className="mx-auto container flex flex-row justify-between text-center items-center">
+                <div className="mx-auto container flex flex-row justify-between text-center items-center border-l-transparent border-b border-black">
                     <a href="http://localhost:3000/">
                         <Image src={logo} alt="logo" width={300} className="py-2 px-3" />
                     </a>
