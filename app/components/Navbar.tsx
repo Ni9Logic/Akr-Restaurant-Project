@@ -4,7 +4,7 @@ import logo from "@/public/images/logo.svg";
 export default function NavBar() {
     return (
 
-        <nav className="bg-[#ffd700]">
+        <nav className="bg-[#ffd700] sticky top-0 z-50">
             <div className="items-center justify-between flex flex-row">
                 <div className="mx-auto container flex flex-row justify-between text-center items-center border-l-transparent border-b border-black">
                     <a href="http://localhost:3000/">
