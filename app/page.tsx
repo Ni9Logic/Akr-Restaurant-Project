@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image';
 import NavBar from './components/Navbar'
-import main from "@/public/images/main1.png";
+import main from "@/public/images/main2.png";
 
 
 export default function Home() {
