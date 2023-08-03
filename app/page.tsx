@@ -1,13 +1,13 @@
 "use client"
 import Image from 'next/image';
 import NavBar from './components/Navbar'
-import main from "@/public/images/main2.png";
+import main from "@/public/images/main9.png";
 
 
 export default function Home() {
 
   return (
-    <main>
+    <main className='bg-[#f4f5ef]'>
       <NavBar />
       <div className='min-h-[89.3vh] flex flex-col items-center justify-center'>
       <div className='container flex flex-col items-center justify-center self-center'>
