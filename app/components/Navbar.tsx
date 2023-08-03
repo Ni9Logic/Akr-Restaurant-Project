@@ -13,7 +13,7 @@ export default function NavBar() {
             <div className="items-center justify-between flex flex-row">
                 <div className="mx-auto container flex flex-row justify-between text-center items-center">
                     <a href="http://localhost:3000/">
-                        <Image src={logo} alt="logo" className="max-sm:w-120 max-[500px]:scale-75 max-sm:py-0 max-sm:px-0 max-sm:ml-[-150px] h-[100px] object-contain ml-[-200px]" />
+                        <Image src={logo} alt="logo" className="max-sm:w-120 max-[500px]:scale-75 max-sm:py-0 max-sm:px-0 max-sm:ml-[-120px] h-[100px] object-contain ml-[-200px]" />
                     </a>
                     <div className="text-base justify-center font-bold cursor-pointer max-[1026px]:hidden">
                         <a className="mr-5 hover:bg-black hover:text-white py-3 px-3 transition-all ease-in font-serif border-black border-[2px]">Menus</a>
