@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <main className='bg-[#f4f5ef]'>
       <NavBar />
-      <div className='min-h-[89.3vh] flex flex-col items-center justify-center'>
-      <div className='container flex flex-col items-center justify-center self-center'>
-        <Image src={main} alt='main' width={1300} height={1000}/>
+      <div className='min-h-[89.3vh]'>
+      <div className='flex max-sm:bject-fit h-[89.3vh] max-sm:overflow-hidden'>
+        <Image src={main} alt='main' width={1300} height={1000} className='max-sm:transform max-sm:scale-70 max-sm:w-full max-sm:object-cover'/>
       </div>
 
       <div className='h-screen'>
