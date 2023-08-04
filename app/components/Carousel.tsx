@@ -6,18 +6,22 @@ import Image from "next/image";
 import biryani from "@/public/images/dishes/biryaniCanva.svg";
 import fish from "@/public/images/dishes/fishCanva.svg";
 import chickenCurry from "@/public/images/dishes/chickenCurryCanva.svg";
+import muttonKarahi from "@/public/images/dishes/muttonKarahi.svg";
 
 const CarouselComponent = () => {
     return (
-        <Carousel autoPlay={true}  interval={3000} infiniteLoop={true} showArrows={true} showStatus={false} className='w-[300px] mt-[40px] max-sm:mt-[100px]'>
+        <Carousel autoPlay={true} interval={3000} showThumbs={false} infiniteLoop={true} showArrows={false} showStatus={false} className='w-[300px] mt-[40px] max-sm:mt-[100px]'>
             <div>
-                <Image src={biryani} alt='biryani' className='w-[100px]' />
+                <Image src={biryani} alt='biryani' quality={50} />
             </div>
             <div>
                 <Image src={fish} alt='fish' />
             </div>
             <div>
                 <Image src={chickenCurry} alt='chickenCurry' />
+            </div>
+            <div>
+                <Image src={muttonKarahi} alt='chickenCurry' />
             </div>
         </Carousel>
     );
