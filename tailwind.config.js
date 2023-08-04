@@ -8,6 +8,9 @@ module.exports = {
     ],
     theme: {
         extend: {
+            transitionProperty: {
+                'top': 'top',
+            },
             width: {
                 '200': '200px',
                 '100': '100px',
