@@ -3,8 +3,8 @@ import Image from "next/image";
 import NavBar from "../components/Navbar";
 import Jahez from "@/public/images/assets/jahez.svg";
 import HungerStation from "@/public/images/assets/Hunger-Station.svg";
-import { useRouter } from "next/navigation";
 import Footer from "../components/Footer";
+import { useRouter } from "next/navigation";
 
 export default function Page() {
     const router = useRouter();
