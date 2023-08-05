@@ -10,7 +10,7 @@ import muttonKarahi from "@/public/images/dishes/muttonKarahi.svg";
 
 const CarouselComponent = () => {
     return (
-        <Carousel autoPlay={true} interval={3000} showThumbs={false} infiniteLoop={true} showArrows={false} showStatus={false} className='w-[300px] mt-[40px] max-sm:mt-[100px]'>
+        <Carousel autoPlay={true} interval={3000} showIndicators={false} showThumbs={false} infiniteLoop={true} showArrows={false} showStatus={false} className='w-[300px] mt-[40px] max-sm:mt-[100px]'>
             <div>
                 <Image src={biryani} alt='biryani' quality={50} />
             </div>

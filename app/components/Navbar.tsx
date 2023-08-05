@@ -66,7 +66,7 @@ export default function NavBar() {
                     height: "100%",
                     backgroundColor: "rgb(225, 15, 40, 0.9)",
                     transition: "top 0.5s ease-in-out",
-                    zIndex: 1000,
+                    zIndex: 10000,
                 }}
                 onClick={onClose}
                 className="container flex flex-col backdrop-blur-sm"
@@ -138,7 +138,7 @@ export default function NavBar() {
 
     return (
         <>
-            <nav className={`sticky top-0 z-50 opacity-100 backdrop-blur-sm mx-auto my-auto ${isScrolled && 'border-b-2 border-black/10 border-opacity-40'}`}>
+            <nav className={`sticky top-0 z-10000 opacity-100 backdrop-blur-sm mx-auto my-auto ${isScrolled && 'border-b-2 border-black/10 border-opacity-40'}`}>
                 <div className="items-center justify-between">
                     <div className="mx-auto flex flex-row justify-between text-center items-center">
                         <a className="cursor-pointer" onClick={() => router.push('/')}>
