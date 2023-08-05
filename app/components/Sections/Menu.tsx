@@ -31,12 +31,13 @@ export default function Menu() {
         console.log(categoryNavBar.current?.offsetHeight, categoryNavBar.current?.scrollHeight, categoryNavBar.current?.clientHeight, window.scrollY);
     }, [isInView]);
     const line1 = useTransform(scrollYProgress, [0, 1], isMobile ? ['-100vw', '10vw'] : ['-100vw', '0vw']);
-    const line2 = useTransform(scrollYProgress, [0, 1], isMobile ? ['100vw', '-50vw'] : ['100vw', '0vw']);
+    const line2 = useTransform(scrollYProgress, [0, 1], isMobile ? ['100vw', '-10vw'] : ['100vw', '0vw']);
     return (
         <>
             <hr className="border-b-2" />
             <section id="Menu" className="h-screen max-[375px]:mt-[200px] relative">
                 <div className="flex flex-row max-sm:flex-col justify-center items-center w-full gap-3">
+                    {/* Only single line on phone */}
                     <motion.div className={""} style={{ x: line1 }}>
                         <Image src={line} alt={"line1"} width={300} height={50} />
                     </motion.div>
@@ -49,11 +50,9 @@ export default function Menu() {
                             <Button title={"Drink"} width={157} />
                         </nav>
                     </div>
-                    {!isMobile &&
-                        <motion.div style={{ x: line2 }}>
-                            <Image src={line} alt={"line2"} width={300} height={50} />
-                        </motion.div>
-                    }
+                    <motion.div style={{ x: line2 }}>
+                        <Image src={line} alt={"line2"} width={300} height={50} />
+                    </motion.div>
                 </div>
 
             </section>

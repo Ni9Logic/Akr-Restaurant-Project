@@ -34,8 +34,8 @@ export default function OrderOnline() {
     return (
         <>
             {/* Order Online Section */}
-            <section className="h-screen overflow:hidden max-sm:flex max-sm:flex-col bg-white" id="Order Online Now">
-                <motion.div className="flex max-sm:justify-center max-sm:container max-sm:ml-[200px] mt-[150px] max-sm:mt-[80px] justify-center items-center flex-col" style={{ x: phoneMockup }} id="phone_Mockup">
+            <section className="h-screen overflow-x:hidden max-sm:flex max-sm:flex-col bg-white" id="Order Online Now">
+                <motion.div className="flex max-sm:justify-center max-sm:container max-sm:ml-[200px] max-[1000px]:mt-[150px] max-sm:mt-[0px] justify-center items-center flex-col" style={{ x: phoneMockup }} id="phone_Mockup">
                     <div className="relative  mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl min-[1000px]:mt-[200px]">
                         <div className="w-[148px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
                         <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
@@ -57,7 +57,7 @@ export default function OrderOnline() {
                 </motion.h1>
 
                 {/* Left Portion of Mockup */}
-                <motion.div id="Left Portion Of Mockup" className="relative mt-[-400px]  max-sm:mt-[50px] lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center  text-center" style={{ x: phoneMockupTitle }}>
+                <motion.div id="Left Portion Of Mockup" className="relative mt-[-500px] max-sm:mt-[10px] lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center  text-center" style={{ x: phoneMockupTitle }}>
                     {
                         !isMobile && (
                             <h1 className="title-font sm:text-4xl text-3xl mb-4 font-bold text-black">
