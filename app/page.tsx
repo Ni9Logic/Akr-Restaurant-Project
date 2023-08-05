@@ -10,7 +10,18 @@ import CarouselComponent from './components/Carousel';
 export default function Home() {
 
   const { scrollYProgress } = useScroll();
-  const x = useTransform(scrollYProgress, [0, 0.5], ['100vm', '50vw']);
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      // You can adjust the breakpoint as needed
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize(); // call once to set the initial state
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  const x = useTransform(scrollYProgress, [0, 0.5], isMobile ? ['100vw', '30vw'] : ['100vw', '50vw']);
 
   return (
     <main className='bg-[#f4f5ef] overflow-x-hidden'>
@@ -35,8 +46,8 @@ export default function Home() {
             <div className="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
             <div className="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white dark:bg-gray-800">
               {/* Images */}
-              <h1 className="text-4xl font-mono transform rotate-90 mt-[200px]">
-                  Available <span className="border-b-2 border-black">Soon!</span>
+              <h1 className="text-4xl font-mono transform -rotate-90 mt-[200px]">
+                Available <span className="border-b-2 border-black">Soon!</span>
               </h1>
             </div>
           </div>
