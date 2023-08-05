@@ -31,7 +31,7 @@ export default function Home() {
   useEffect(() => {
     const handleResize = () => {
       // Adjust the breakpoint as needed
-      setIsMobile(window.innerWidth <= 768);
+      setIsMobile(window.innerWidth <= 1000);
     };
 
     handleResize(); // call once to set the initial state
@@ -40,8 +40,8 @@ export default function Home() {
   }, []);
 
   // Phone Mockup Size
-  const phoneMockup = useTransform(scrollYProgress, [0, 0.5], isMobile ? ['100vw', '-40vw'] : ['100vw', '35vw']);
-  const phoneMockupTitle = useTransform(scrollYProgress, [0.6, 1], isMobile ? ['-100vw', '0vw'] : ['-100vw', '20vw']);
+  const phoneMockup = useTransform(scrollYProgress, [0, 0.5], isMobile ? ['100vw', '-50vw'] : ['100vw', '27vw']);
+  const phoneMockupTitle = useTransform(scrollYProgress, [0.6, 0.8], isMobile ? ['-100vw', '0vw'] : ['-100vw', '5vw']);
 
   // Online Delivery Buttons
   const [isJahezLoading, setJahezLoading] = useState(false);
@@ -69,7 +69,7 @@ export default function Home() {
       {/* Order Online Section */}
       <hr className="border-b-2"></hr>
       <section className="h-screen overflow:hidden max-sm:flex max-sm:flex-col" id="Order Online Now">
-        <motion.div className="flex max-sm:ml-[200px] mt-[80px]" style={{ x: phoneMockup }} id="phone_mockup">
+        <motion.div className="flex max-sm:justify-center max-sm:container max-sm:ml-[200px] mt-[80px] flex-col" style={{ x: phoneMockup }} id="phone_mockup">
           <div className="relative  mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl">
             <div className="w-[148px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
             <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
@@ -81,12 +81,12 @@ export default function Home() {
             </div>
           </div>
         </motion.div>
-        <motion.h1 className="text-3xl font-bold leading-relaxed flex container justify-center max-sm:ml-[150px]" style={{ x: phoneMockup }}>
-          Order Online Now
+        <motion.h1 className="text-3xl font-bold leading-relaxed flex container justify-center max-sm:ml-[200px]" style={{ x: phoneMockup }}>
+          Order Now
         </motion.h1>
 
         {/* Left Portion of Mockup */}
-        <motion.div id="Left Portion Of Mockup" className="relative mt-[-400px]  max-sm:mt-[50px] lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center" style={{ x: phoneMockupTitle }}>
+        <motion.div id="Left Portion Of Mockup" className="relative mt-[-400px]  max-sm:mt-[50px] lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center  text-center" style={{ x: phoneMockupTitle }}>
           {
             !isMobile && (
               <h1 className="title-font sm:text-4xl text-3xl mb-4 font-bold text-black">
@@ -130,7 +130,7 @@ export default function Home() {
           </div>
         </motion.div>
       </section >
-      <Footer />
+
     </main >
   )
 };
