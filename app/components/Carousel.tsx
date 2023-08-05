@@ -11,7 +11,7 @@ import loader from "react-loading";
 
 const CarouselComponent = () => {
     return (
-        <Carousel  autoPlay={true} interval={3000} showIndicators={false} useKeyboardArrows={true} showThumbs={false} infiniteLoop={true} showArrows={false} showStatus={false} className='w-[300px] max-[350px]:w-auto mt-[40px] max-sm:mt-[100px]'>
+        <Carousel  autoPlay={true} interval={3000} showIndicators={false} useKeyboardArrows={true} showThumbs={false} infiniteLoop={true} showArrows={false} showStatus={false} className='w-[300px] max-[400px]:w-auto mt-[40px] max-sm:mt-[100px]'>
             <div>
                 <Image src={biryani} alt='biryani' quality={1} loading='lazy' />
             </div>
