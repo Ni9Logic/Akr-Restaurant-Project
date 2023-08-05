@@ -9,17 +9,8 @@ import { useEffect, useState } from "react";
 export default function OrderOnline() {
     const router = useRouter();
 
-    const [webPageLoading, setWebPageLoading] = useState(true);
     const { scrollYProgress } = useScroll();
     const [isMobile, setIsMobile] = useState(false);
-
-    // Web page loading
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setWebPageLoading(false);
-        }, 3000); // simulate network request time
-        return () => clearTimeout(timer);
-    }, []);
 
     // Mobile check
     useEffect(() => {
@@ -44,9 +35,8 @@ export default function OrderOnline() {
         <>
             {/* Order Online Section */}
             <section className="h-screen overflow:hidden max-sm:flex max-sm:flex-col bg-white" id="Order Online Now">
-                <hr className="border-b-2"></hr>
                 <motion.div className="flex max-sm:justify-center max-sm:container max-sm:ml-[200px] mt-[150px] max-sm:mt-[80px] justify-center items-center flex-col" style={{ x: phoneMockup }} id="phone_Mockup">
-                    <div className="relative  mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl">
+                    <div className="relative  mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl min-[1000px]:mt-[200px]">
                         <div className="w-[148px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
                         <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
                         <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
