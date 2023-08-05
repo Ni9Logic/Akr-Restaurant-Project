@@ -7,21 +7,22 @@ import biryani from "@/public/images/dishes/biryaniCanva.svg";
 import fish from "@/public/images/dishes/fishCanva.svg";
 import chickenCurry from "@/public/images/dishes/chickenCurryCanva.svg";
 import muttonKarahi from "@/public/images/dishes/muttonKarahi.svg";
+import loader from "react-loading";
 
 const CarouselComponent = () => {
     return (
-        <Carousel autoPlay={true} interval={3000} showIndicators={false} showThumbs={false} infiniteLoop={true} showArrows={false} showStatus={false} className='w-[300px] mt-[40px] max-sm:mt-[100px]'>
+        <Carousel  autoPlay={true} interval={3000} showIndicators={false} useKeyboardArrows={true} showThumbs={false} infiniteLoop={true} showArrows={false} showStatus={false} className='w-[300px] max-sm:w-auto mt-[40px] max-sm:mt-[100px]'>
             <div>
-                <Image src={biryani} alt='biryani' quality={50} />
+                <Image src={biryani} alt='biryani' quality={1} loading='lazy' />
             </div>
             <div>
-                <Image src={fish} alt='fish' />
+                <Image src={fish} alt='fish' quality={1} loading='lazy' />
             </div>
             <div>
-                <Image src={chickenCurry} alt='chickenCurry' />
+                <Image src={chickenCurry} quality={1} alt='chickenCurry' loading='lazy' />
             </div>
             <div>
-                <Image src={muttonKarahi} alt='chickenCurry' />
+                <Image src={muttonKarahi} quality={1} alt='muttonCurry' loading='lazy' />
             </div>
         </Carousel>
     );
