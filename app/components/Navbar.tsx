@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import logo from "@/public/images/logo8.svg";
+import logo from "@/public/images/logos/logo8.svg";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 

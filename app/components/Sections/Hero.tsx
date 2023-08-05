@@ -1,6 +1,6 @@
 "use client"
 import Image from 'next/image';
-import main from "@/public/images/main11.png";
+import main from "@/public/images/main/main11.png";
 import CarouselComponent from "../Carousel";
 
 export default function Hero() {
