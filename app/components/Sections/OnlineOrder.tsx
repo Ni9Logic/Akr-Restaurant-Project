@@ -1,9 +1,8 @@
 "use client"
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from 'next/image';
-import JahezSS from "@/public/mockups/Jahez.jpeg";
-import HungerStation from "@/public/mockups/HungerStation.jpeg";
-import { Carousel } from "react-responsive-carousel";
+import Jahez from "@/public/images/assets/jahez.svg";
+import HungerStation from "@/public/images/assets/Hunger-Station.svg";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 export default function OrderOnline() {
@@ -25,8 +24,8 @@ export default function OrderOnline() {
     }, []);
 
     // Phone Mockup Size
-    const phoneMockup = useTransform(scrollYProgress, [-0.5, 0.5], isMobile ? ['100vw', '-50vw'] : ['100vw', '27vw']);
-    const phoneMockupTitle = useTransform(scrollYProgress, [0, 0.5], isMobile ? ['-100vw', '0vw'] : ['-100vw', '5vw']);
+    const phoneMockup = useTransform(scrollYProgress, isMobile ? [-0.5, 0.3] : [-0.5, 0.2], isMobile ? ['300vw', '-190vw'] : ['90vw', '27vw']);
+    const phoneMockupTitle = useTransform(scrollYProgress, isMobile ? [-0.5, 0.3] : [0, 0.2], isMobile ? ['-100vw', '40vw'] : ['-50vw', '5vw']);
 
     // Online Delivery Buttons
     const [isJahezLoading, setJahezLoading] = useState(false);
@@ -34,25 +33,30 @@ export default function OrderOnline() {
     return (
         <>
             {/* Order Online Section */}
-            <section className="h-screen overflow-x:hidden max-sm:flex max-sm:flex-col bg-white" id="Order Online Now">
-                <motion.div className="flex max-sm:justify-center max-sm:container max-sm:ml-[200px] max-[1000px]:mt-[150px] max-sm:mt-[0px] justify-center items-center flex-col" style={{ x: phoneMockup }} id="phone_Mockup">
-                    <div className="relative  mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl min-[1000px]:mt-[200px]">
-                        <div className="w-[148px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
-                        <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
-                        <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
-                        <div className="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
-                        <div className="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white dark:bg-gray-800">
-                            {/* Images */}
-                            <div id="phoneMockup">
-                                <Carousel autoPlay={true} infiniteLoop={true} interval={3000} showThumbs={false} swipeable={true} showIndicators={false} showArrows={false} showStatus={false} >
-                                    <Image src={JahezSS} alt="JahezSS" loading="lazy" />
-                                    <Image src={HungerStation} alt="HungerStation" loading="lazy" />
-                                </Carousel>
+            <section id="order online" className="h-screen overflow-x:hidden max-sm:flex max-sm:flex-col bg-white">
+                <div className="max-sm:scale-75">
+                    <motion.div className="flex max-sm:justify-center max-sm:container max-sm:ml-[200px] max-[1000px]:mt-[150px] max-sm:mt-[0px] justify-center items-center flex-col" style={{ x: phoneMockup }} id="phone_Mockup">
+                        <div className="relative  mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl min-[1000px]:mt-[200px]">
+                            <div className="w-[148px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
+                            <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
+                            <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
+                            <div className="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
+                            <div className="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white dark:bg-gray-800 items-center justfy-center">
+                                {/* Images */}
+                                <div id="phoneMockup flex flex-col">
+                                    <div className="bg-[#EA0029] h-[282px] justify-center items-center flex self-center">
+                                        <Image src={Jahez} alt="Jahez Logo" className="flex mx-auto my-auto w-auto h-auto" />
+                                    </div>
+                                    <div className="bg-blue-500 h-[290px] justify-center items-center flex self-center">
+                                        <Image src={HungerStation} alt="Hunger Station Logo" className="flex mx-auto my-auto w-auto h-auto" />
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </motion.div>
-                <motion.h1 className="text-3xl font-bold leading-relaxed flex container justify-center max-sm:ml-[200px]" style={{ x: phoneMockup }}>
+                    </motion.div>
+                </div>
+                <motion.h1 className="text-3xl font-bold leading-relaxed flex container justify-center max-sm:ml-[200px] max-sm:mt-[-50px]" style={{ x: phoneMockup }}>
                     Order Now
                 </motion.h1>
 
@@ -66,7 +70,7 @@ export default function OrderOnline() {
                         )
                     }
                     {/* Delivery Buttons */}
-                    <div className="flex flex-row justify-center text-center items-center border gap-2">
+                    <div className="flex flex-row justify-center text-center items-center border gap-2 max-sm:mt-auto">
                         <button onClick={
                             () => {
                                 setJahezLoading(true);

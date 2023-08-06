@@ -1,3 +1,4 @@
+import { Toaster } from 'react-hot-toast'
 import './globals.css'
 import type { Metadata } from 'next'
 
@@ -15,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Toaster />
         {children}
       </body>
     </html>

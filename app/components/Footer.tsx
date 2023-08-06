@@ -10,6 +10,20 @@ export default function Footer() {
                 <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2023 All Copy Rights Reserved —
                     <a href="https://github.com/ni9logic" className="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@Ni9Logic</a>
                 </p>
+                <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"></p>
+                <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                    <span className="ml-3 text-xl">Our Timings</span>
+                </a>
+                <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+                    5AM - 1AM
+                </p>
+                <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"></p>
+                <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                    <span className="ml-3 text-xl">Phone</span>
+                </a>
+                <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+                    +966 59 344 5009
+                </p>
                 <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
                     <a className="text-gray-500">
                         <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">

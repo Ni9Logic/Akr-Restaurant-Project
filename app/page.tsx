@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Menu from "./components/Sections/Menu";
 import OrderOnline from "./components/Sections/OnlineOrder";
 import Hero from "./components/Sections/Hero";
+import Testimonials from "./components/Sections/Locations";
 
 export default function Home() {
 
@@ -31,6 +32,7 @@ export default function Home() {
             <Hero/>
             <OrderOnline/>
             <Menu/>
+            <Testimonials />
             {/* Footer */}
             <Footer/>
         </main>

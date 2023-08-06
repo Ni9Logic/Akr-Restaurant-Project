@@ -1,75 +1,26 @@
-import { motion, useScroll, useTransform, AnimatePresence, useInView } from "framer-motion";
-import Image from 'next/image';
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import SpecialFoodDishes, { BBQ, Drink, DumPukht, FoodMenuDishes } from "../Dishes/Dishes";
 import { useEffect, useRef, useState } from "react";
 import line from "@/public/images/assets/lines.png";
 import Button from "../ui/Button";
-import Dish from "../ui/Dish";
-import biryani from "@/public/images/dishes/biryaniCanva.svg";
-import rice from "@/public/images/dishes/Rice.png"
-import meatRice from "@/public/images/dishes/meatRice.png";
-import potatoMeat from "@/public/images/dishes/PotatoMeat.png";
-import chickenCurry from "@/public/images/dishes/chickenCurryCanva.svg";
-import daalChanna from "@/public/images/dishes/daalChanna.png";
+import Image from 'next/image';
 
-function SpecialFoodDishes({ setInView }: any) {
-    const ref = useRef(null);
-    const inView = useInView(ref);
-
-    useEffect(() => {
-        setInView(inView);
-        console.log(inView);
-    }, [inView]);
-    const targetRef = useRef<HTMLDivElement>(null);
-    const { scrollYProgress } = useScroll({
-        target: targetRef,
-        offset: ["0 1", "1.33 1"],
-    })
-
-    const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-    const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-
-    const [isMobile, setIsMobile] = useState(false);
-
-    // Mobile check
-    useEffect(() => {
-        const handleResize = () => {
-            // Adjust the breakpoint as needed
-            setIsMobile(window.innerWidth <= 1000);
-        };
-
-        handleResize(); // call once to set the initial state
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
-    return isMobile ?
-        <div ref={ref}>
-            <div id="Special Food" className="mt-[100px] justify-center self-center max-sm:flex max-sm:flex-col max-sm:space-y-2">
-                <Dish fullPrice={20} halfPrice={10} title="Biryani" image={biryani} category="Special Food" />
-                <Dish fullPrice={38} halfPrice={19} title="Rice" image={rice} category="Special Food" />
-                <Dish fullPrice={50} halfPrice={25} title="Meat Rice" image={meatRice} category="Special Food" width={200} height={200} />
-                <Dish fullPrice={12} halfPrice={7} title="Potato Meat" image={potatoMeat} category="Special Food" width={200} height={200} />
-                <Dish fullPrice={12} halfPrice={7} title="Chkicken Curry" image={chickenCurry} category="Special Food" width={200} height={200} />
-                <Dish fullPrice={5} halfPrice={10} title="Daal Channa" image={daalChanna} category="Special Food" width={200} height={200} />
-            </div >
-        </div>
-        :
-        <div ref={ref}>
-            <motion.div ref={targetRef} id="Special Food" className="grid grid-cols-3 container items-center mt-[100px] justify-center self-center max-sm:flex max-sm:flex-col max-sm:space-y-2"
-                style={{ scale: scaleProgress, opacity: opacityProgress }}>
-                <Dish fullPrice={20} halfPrice={10} title="Biryani" image={biryani} category="Special Food" />
-                <Dish fullPrice={38} halfPrice={19} title="Rice" image={rice} category="Special Food" />
-                <Dish fullPrice={50} halfPrice={25} title="Meat Rice" image={meatRice} category="Special Food" width={200} height={200} />
-                <Dish fullPrice={12} halfPrice={7} title="Potato Meat" image={potatoMeat} category="Special Food" width={200} height={200} />
-                <Dish fullPrice={12} halfPrice={7} title="Chkicken Curry" image={chickenCurry} category="Special Food" width={200} height={200} />
-                <Dish fullPrice={5} halfPrice={10} title="Daal Channa" image={daalChanna} category="Special Food" width={200} height={200} />
-            </motion.div>
-        </div>
-
-}
 
 export default function Menu() {
     const [isSpecialFoodInView, setIsSpecialFoodInView] = useState(false);
+    const [isFoodMenuInView, setIsFoodMenuInView] = useState(false);
+    const [isDumPukhtInView, setDumPuktInView] = useState(false);
+    const [isBBQInView, setBBQInView] = useState(false);
+    const [isDrinksInView, setDrinkInView] = useState(false);
+    const [isMenu, setIsMenu] = useState(false);
+
+    useEffect(() => {
+        if (!isSpecialFoodInView && !isFoodMenuInView && !isDumPukhtInView && !isBBQInView && !isDrinksInView)
+            setIsMenu(false);
+        else
+            setIsMenu(true);
+    }, [isSpecialFoodInView, isFoodMenuInView, isDumPukhtInView, isBBQInView, isDrinksInView])
+
 
     const navMotionVariants = {
         initial: { y: 20 }, // starts 20px above its original position
@@ -120,25 +71,25 @@ export default function Menu() {
     }, []);
 
 
-    const line1 = useTransform(scrollYProgress, [0, 1], isMobile ? ['-100vw', '10vw'] : ['-100vw', '0vw']);
-    const line2 = useTransform(scrollYProgress, [0, 1], isMobile ? ['100vw', '-10vw'] : ['100vw', '0vw']);
+    const line1 = useTransform(scrollYProgress, [0, 0.3], isMobile ? ['-100vw', '10vw'] : ['-100vw', '40vw']);
+    const line2 = useTransform(scrollYProgress, [0, 0.3], isMobile ? ['100vw', '-10vw'] : ['100vw', '40vw']);
     return (
         <>
             {/* Border */}
             <hr className="border-b-2" />
-            <section id="Menu" className="h-screen max-[375px]:mt-[200px] relative">
-                <div className="flex flex-row max-sm:flex-col min-[1000px]:justify-center min-[1000px]:items-center w-full gap-3">
+            <section id="menu" className="h-screen max-[375px]:mt-[200px] relative">
+                <div className="min-[1000px:]flex min-[1000px]:flex-row max-sm:flex-col min-[1000px]:justify-center min-[1000px]:items-center gap-3">
                     <motion.div className={""} style={{ x: line1 }}>
                         <Image src={line} alt={"line1"} width={300} height={50} />
                     </motion.div>
-                    <div ref={categoryNavBar} className='max-sm:flex max-sm:container max-sm:overflow-x-auto flex flex-row justify-center self-center'>
+                    <div ref={categoryNavBar} className='max-sm:flex max-sm:overflow-x-auto flex flex-row justify-center self-center gap-3'>
                         <div className="max-sm:overflow-y-hidden">
-                            <nav className='flex flex-row justify-center items-center gap-3 self-center'>
+                            <nav className='flex flex-row justify-center items-center gap-3 max-sm:gap-0 self-center overflow-hidden h-auto'>
                                 <Button title={"Special Food"} width={157} inView={isSpecialFoodInView} />
-                                <Button title={"Dum Pukht"} width={157} />
-                                <Button title={"Food Menu"} width={157} />
-                                <Button title={"BBQ"} width={157} />
-                                <Button title={"Drink"} width={157} />
+                                <Button title={"Dum Pukht"} width={157} inView={isDumPukhtInView} />
+                                <Button title={"Food Menu"} width={157} inView={isFoodMenuInView} />
+                                <Button title={"BBQ"} width={157} inView={isBBQInView} />
+                                <Button title={"Drink"} width={157} inView={isDrinksInView} />
                             </nav>
                         </div>
 
@@ -147,19 +98,19 @@ export default function Menu() {
                             {isSticky && (
                                 <motion.div
                                     ref={categoryNavBar}
-                                    className={`max-sm:flex max-sm:overflow-x-auto fixed top-0 z-50 w-full p-4 max-sm:backdrop-blur-sm`}
+                                    className={`${isMenu && 'fixed top-0 z-50 bg-white'}`}
                                     initial="initial"
                                     animate="animate"
                                     exit="exit"
                                     variants={navMotionVariants}
                                 >
                                     <div className="overflow-y-hidden">
-                                        <nav className='flex flex-row justify-center items-center gap-3 self-center'>
+                                        <nav className='flex flex-row justify-center items-center gap-3 self-center overflow-hidden'>
                                             <Button title={"Special Food"} width={157} inView={isSpecialFoodInView} />
-                                            <Button title={"Dum Pukht"} width={157} />
-                                            <Button title={"Food Menu"} width={157} />
-                                            <Button title={"BBQ"} width={157} />
-                                            <Button title={"Drink"} width={157} />
+                                            <Button title={"Dum Pukht"} width={157} inView={isDumPukhtInView} />
+                                            <Button title={"Food Menu"} width={157} inView={isFoodMenuInView} />
+                                            <Button title={"BBQ"} width={157} inView={isBBQInView} />
+                                            <Button title={"Drink"} width={157} inView={isDrinksInView} />
                                         </nav>
                                     </div>
                                 </motion.div>
@@ -172,7 +123,11 @@ export default function Menu() {
                 </div>
                 <SpecialFoodDishes setInView={setIsSpecialFoodInView} />
             </section>
-
+            <FoodMenuDishes setInView={setIsFoodMenuInView} />
+            <DumPukht setInView={setDumPuktInView} />
+            <BBQ setInView={setBBQInView} />
+            <Drink setInView={setDrinkInView} />
+            <div className="mb-[20px]" />
         </>
     )
 }
