@@ -7,19 +7,20 @@ interface DishProps {
     fullPrice: string | number,
     halfPrice?: string | number,
     midPrice?: string | number,
+    className?: string
     width?: number,
     height?: number,
     image?: any,
 }
 
-const Dish: React.FC<DishProps> = ({ title, category, fullPrice, halfPrice, midPrice, image, width, height }) => {
+const Dish: React.FC<DishProps> = ({ title, category, fullPrice, halfPrice, midPrice, image, width, height, className }) => {
     return (
         <>
 
             <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 
                 <div className="flex flex-col items-center pb-10">
-                    <Image src={image} alt="image" loading="lazy" width={width} height={height} className="w-[200px]" />
+                    <Image src={image} alt="image" loading="lazy" width={width} height={height} className={`w-[200px] ${className}`} />
                     <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">{title}</h5>
                     <span className="text-sm text-gray-500 dark:text-gray-400">{category}</span>
                     <div className="flex mt-4 space-x-3 md:mt-6">

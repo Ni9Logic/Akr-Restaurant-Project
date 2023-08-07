@@ -24,7 +24,7 @@ export default function OrderOnline() {
     }, []);
 
     // Phone Mockup Size
-    const phoneMockup = useTransform(scrollYProgress, isMobile ? [-0.5, 0.3] : [-0.5, 0.2], isMobile ? ['300vw', '-190vw'] : ['90vw', '27vw']);
+    const phoneMockup = useTransform(scrollYProgress, isMobile ? [-0.5, 0.3] : [0, 0.2], isMobile ? ['300vw', '-190vw'] : ['90vw', '27vw']);
     const phoneMockupTitle = useTransform(scrollYProgress, isMobile ? [-0.5, 0.3] : [0, 0.2], isMobile ? ['-100vw', '40vw'] : ['-50vw', '5vw']);
 
     // Online Delivery Buttons

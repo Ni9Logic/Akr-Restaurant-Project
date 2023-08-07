@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import SpecialFoodDishes, { BBQ, Drink, DumPukht, FoodMenuDishes } from "../Dishes/Dishes";
 import { useEffect, useRef, useState } from "react";
 import line from "@/public/images/assets/lines.png";
+import flippedLine from "@/public/images/assets/linesFlipped.png";
 import Button from "../ui/Button";
 import Image from 'next/image';
 
@@ -72,7 +73,7 @@ export default function Menu() {
 
 
     const line1 = useTransform(scrollYProgress, [0, 0.3], isMobile ? ['-100vw', '10vw'] : ['-100vw', '40vw']);
-    const line2 = useTransform(scrollYProgress, [0, 0.3], isMobile ? ['100vw', '-10vw'] : ['100vw', '40vw']);
+    const line2 = useTransform(scrollYProgress, [0, 0.3], isMobile ? ['100vw', '-10vw'] : ['150vw', '40vw']);
     return (
         <>
             {/* Border */}
@@ -118,7 +119,7 @@ export default function Menu() {
                         </AnimatePresence>
                     </div>
                     <motion.div style={{ x: line2 }}>
-                        <Image src={line} alt={"line2"} width={300} height={50} />
+                        <Image src={flippedLine} alt={"line2"} width={300} height={50} />
                     </motion.div>
                 </div>
                 <SpecialFoodDishes setInView={setIsSpecialFoodInView} />
