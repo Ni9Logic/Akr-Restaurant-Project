@@ -9,8 +9,6 @@ import Button from "./ui/Button";
 export default function NavBar() {
     const router = useRouter();
     const [open, setOpen] = useState(false);
-    const [isOnlineOrderLoading, setOnlineOrderLoading] = useState(false);
-    const [isHomeLoading, setHomeLoading] = useState(false);
 
 
     // To check for scrolling
@@ -29,22 +27,6 @@ export default function NavBar() {
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
-
-    function onOrderOnline() {
-        setOnlineOrderLoading(true);
-        setTimeout(() => {
-            router.push('/OrderOnline');
-            setOnlineOrderLoading(false);
-        }, 2000);
-    }
-
-    function onHome() {
-        setHomeLoading(true);
-        setTimeout(() => {
-            router.push('/');
-            setHomeLoading(false);
-        }, 2000);
-    }
 
     function FullScreenModal({ isOpen, onClose }: any) {
         const [topValue, setTopValue] = useState("-100%");
@@ -105,18 +87,10 @@ export default function NavBar() {
                 <div className="mx-auto">
                     <h1 className="text-3xl font-medium font-mono text-white">
                         <div className="space-y-3 mb-[100px] justify-start align-baseline">
-                            <button className="flex flex-row gap-2 self-center items-center container justify-around">
-                                Home
-                            </button>
-                            <button onClick={() => router.push('/OrderOnline')} className="flex flex-row items-center">
-                                Order Online
-                            </button>
-                            <button className="flex flex-row gap-2 items-center">
-                                <Link activeClass="active" to="contact us" spy={true} smooth={true} offset={50} duration={500}>Contact Us</Link>
-                            </button>
-                            <button className="flex flex-row gap-2 self-center items-center container justify-around">
-                                Location
-                            </button>
+                            <Button title="Home" width={157} onClick={() => setOpen(!open)} />
+                            <Button title="Order Online" width={157} onClick={() => setOpen(!open)} />
+                            <Button title="Contact Us" width={157} onClick={() => setOpen(!open)} />
+                            <Button title="Location" width={157} onClick={() => setOpen(!open)} />
                         </div>
                     </h1>
                 </div>
@@ -133,10 +107,10 @@ export default function NavBar() {
                             <Image src={logo} alt="logo" className=" max-[500px]:scale-75 object-contain max-sm:flex max-sm:justify-center max-sm:container" />
                         </a>
                         <div className="flex flex-row mr-2 text-base justify-center font-bold cursor-pointer max-[1357px]:hidden gap-2 transition-all ease-in-out">
-                            <Button title="Home" width={157} />
-                            <Button title="Menu" width={157} />
-                            <Button title="Contact Us" width={157} />
-                            <Button title="Order Online" width={157} />
+                            <Button title="Home" width={157} onClick={() => setOpen(!open)} />
+                            <Button title="Menu" width={157} onClick={() => setOpen(!open)} />
+                            <Button title="Contact Us" width={157} onClick={() => setOpen(!open)} />
+                            <Button title="Order Online" width={157} onClick={() => setOpen(!open)} />
                         </div>
                         {/* Hamburger Menu */}
                         {

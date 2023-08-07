@@ -60,7 +60,7 @@ export default function SpecialFoodDishes({ setInView }: any) {
 
     return isMobile ?
         <div ref={ref}>
-            <div id="special food" className="mt-[100px] justify-center self-center max-sm:flex max-sm:flex-col max-sm:space-y-2">
+            <div id="special food" className="mt-[100px] justify-center self-center max-sm:flex max-sm:flex-col max-sm:space-y-2 max-sm:justify-center max-sm:items-center">
                 <Dish fullPrice={20} halfPrice={10} title="Biryani" image={biryani} category="Special Food" />
                 <Dish fullPrice={38} halfPrice={19} title="Rice" image={rice} category="Special Food" />
                 <Dish fullPrice={50} halfPrice={25} title="Meat Rice" image={meatRice} category="Special Food" width={200} height={200} />
@@ -115,7 +115,7 @@ export function FoodMenuDishes({ setInView }: any) {
 
     return isMobile ?
         <div ref={ref}>
-            <div id="food menu" className="mt-[100px] justify-center self-center max-sm:flex max-sm:flex-col max-sm:space-y-2">
+            <div id="food menu" className="mt-[100px] justify-center self-center max-sm:flex max-sm:flex-col max-sm:space-y-2 max-sm:justify-center max-sm:items-center">
                 <Dish fullPrice={100} halfPrice={50} title="Mutton Karahi" image={biryani} category="Food Menu" />
                 <Dish fullPrice={60} halfPrice={30} title="Chicken Karahi" image={rice} category="Food Menu" />
                 <Dish fullPrice={48} halfPrice={24} title="Chapli Kabab" image={meatRice} category="Food Menu" width={200} height={200} />
@@ -182,7 +182,7 @@ export function DumPukht({ setInView }: any) {
 
     return isMobile ?
         <div ref={ref}>
-            <div id="dum pukht" className="mt-[100px] justify-center self-center max-sm:flex max-sm:flex-col max-sm:space-y-2">
+            <div id="dum pukht" className="mt-[100px] justify-center self-center max-sm:flex max-sm:flex-col max-sm:space-y-2 max-sm:justify-center max-sm:items-center">
                 <Dish fullPrice={600} halfPrice={600} title="Half Dum Puhkt" image={dumPukht} category="Dum Pukht" className="h-[200px]" />
                 <Dish fullPrice={1150} halfPrice={1150} title="Full Dum Puhkt" image={dumPukht} category="Dum Pukht" className="h-[200px]" />
             </div >
@@ -229,10 +229,10 @@ export function BBQ({ setInView }: any) {
 
     return isMobile ?
         <div ref={ref}>
-            <div id="bbq" className="mt-[100px] justify-center self-center max-sm:flex max-sm:flex-col max-sm:space-y-2">
-                <Dish fullPrice={"15 Per Piece"} title="Seekh Tikka" image={seekhTikka} category="BBQ" className="transform rotate-90" />
-                <Dish fullPrice={15} halfPrice={15} title="Chicken Boti" image={chickenBoti} category="BBQ" />
-                <Dish fullPrice={15} halfPrice={15} title="Meat Chanp" image={meatChanp} category="BBQ" width={200} height={200} />
+            <div id="bbq" className="mt-[100px] justify-center self-center max-sm:flex max-sm:flex-col max-sm:space-y-2 max-sm:justify-center max-sm:items-center">
+                <Dish fullPrice={"15 Per Piece"} title="Seekh Tikka" image={seekhTikka} category="BBQ" className="h-[200px] object-contain" />
+                <Dish fullPrice={"15 Per Piece"} title="Chicken Boti" image={chickenBoti} category="BBQ" className="h-[200px] object-contain" />
+                <Dish fullPrice={"15 Per Piece"} title="Meat Chanp" image={meatChanp} category="BBQ" width={200} height={200} />
             </div >
         </div>
         :
@@ -278,7 +278,7 @@ export function Drink({ setInView }: any) {
 
     return isMobile ?
         <div ref={ref}>
-            <div id="drink" className="mt-[100px] justify-center self-center max-sm:flex max-sm:flex-col max-sm:space-y-2">
+            <div id="drink" className="mt-[100px] justify-center self-center max-sm:flex max-sm:flex-col max-sm:space-y-2 max-sm:justify-center max-sm:items-center">
                 <Dish fullPrice={"Large 9"} midPrice={"Small 2.5"} halfPrice={"Medium 5"} title="Mirinda" image={mirinda} width={200} height={200} category="Drink" className="h-[200px] object-contain" />
                 <Dish fullPrice={"Large 9"} midPrice={"Small 2.5"} halfPrice={"Medium 5"} title="Pepsi" image={pepsi} category="Drink" width={200} height={200} className="h-[200px] object-contain" />
                 <Dish fullPrice={"Large 9"} midPrice={"Small 2.5"} halfPrice={"Medium 5"} title="7 up" image={sevenUp} category="Drink" width={200} height={200} className="h-[200px] object-contain" />

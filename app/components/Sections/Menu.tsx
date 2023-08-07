@@ -78,7 +78,7 @@ export default function Menu() {
         <>
             {/* Border */}
             <hr className="border-b-2" />
-            <section id="menu" className="h-screen max-[375px]:mt-[200px] relative">
+            <section id="menu" className="max-[375px]:mt-[200px] relative">
                 <div className="min-[1000px:]flex min-[1000px]:flex-row max-sm:flex-col min-[1000px]:justify-center min-[1000px]:items-center gap-3">
                     <motion.div className={""} style={{ x: line1 }}>
                         <Image src={line} alt={"line1"} width={300} height={50} />
@@ -122,8 +122,8 @@ export default function Menu() {
                         <Image src={flippedLine} alt={"line2"} width={300} height={50} />
                     </motion.div>
                 </div>
-                <SpecialFoodDishes setInView={setIsSpecialFoodInView} />
             </section>
+            <SpecialFoodDishes setInView={setIsSpecialFoodInView} />
             <FoodMenuDishes setInView={setIsFoodMenuInView} />
             <DumPukht setInView={setDumPuktInView} />
             <BBQ setInView={setBBQInView} />
