@@ -43,12 +43,12 @@ export default function OrderOnline() {
                             <div className="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
                             <div className="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white dark:bg-gray-800 items-center justfy-center">
                                 {/* Images */}
-                                <div id="phoneMockup flex flex-col">
-                                    <div className="bg-[#EA0029] h-[282px] justify-center items-center flex self-center">
-                                        <Image src={Jahez} alt="Jahez Logo" className="flex mx-auto my-auto w-auto h-auto" />
+                                <div id="phoneMockup grid grid-rows-2">
+                                    <div className="bg-[#EA0029] h-[282px]">
+                                        <Image src={Jahez} alt="Jahez Logo" className="w-full h-full" />
                                     </div>
-                                    <div className="bg-blue-500 h-[290px] justify-center items-center flex self-center">
-                                        <Image src={HungerStation} alt="Hunger Station Logo" className="flex mx-auto my-auto w-auto h-auto" />
+                                    <div className="bg-blue-500 h-[290px]">
+                                        <Image src={HungerStation} alt="Hunger Station Logo" className="h-full w-full" />
 
                                     </div>
                                 </div>
