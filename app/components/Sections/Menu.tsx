@@ -1,10 +1,34 @@
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import SpecialFoodDishes, { BBQ, Drink, DumPukht, FoodMenuDishes } from "../Dishes/Dishes";
 import { useEffect, useRef, useState } from "react";
-import line from "@/public/images/assets/lines.png";
-import flippedLine from "@/public/images/assets/linesFlipped.png";
+import menu from "@/public/images/assets/menuu.png";
 import Button from "../ui/Button";
 import Image from 'next/image';
+import biryani from "@/public/images/dishes/biryaniCanva.svg";
+import rice from "@/public/images/dishes/Rice.png"
+import meatRice from "@/public/images/dishes/meatRice.png";
+import potatoMeat from "@/public/images/dishes/PotatoMeat.png";
+import chickenCurry from "@/public/images/dishes/chickenCurryCanva.svg";
+import daalChanna from "@/public/images/dishes/daalChanna.png";
+import pepsi from "@/public/images/dishes/Pepsi.png";
+import mirinda from "@/public/images/dishes/Mirinda.png";
+import sevenUp from "@/public/images/dishes/7up.png";
+import lassi from "@/public/images/dishes/Lassi.png";
+import dumPukht from "@/public/images/dishes/dumPukht.png";
+import seekhTikka from "@/public/images/dishes/seekhTikka.png";
+import fish from "@/public/images/dishes/fishCanva.svg";
+import chickenBoti from "@/public/images/dishes/chickenBoti.png";
+import meatChanp from "@/public/images/dishes/meatChanp.png";
+import falooda from "@/public/images/dishes/Falooda1.png";
+import muttonKarahi from "@/public/images/dishes/muttonKarahi.svg";
+import chickenKarahi from "@/public/images/dishes/Chicken Karahi.png";
+import iceCream from "@/public/images/dishes/iceCream.png";
+import Haleem from "@/public/images/dishes/Haleem.png";
+import Nihari from "@/public/images/dishes/Nihari.png";
+import Soup from "@/public/images/dishes/soup.png";
+import chickenRice from "@/public/images/dishes/chicken rice.png";
+import chickenRiceFaham from "@/public/images/dishes/chicken rice faham.png";
+import chapliKabab from "@/public/images/dishes/chapli.png";
 
 
 export default function Menu() {
@@ -72,55 +96,67 @@ export default function Menu() {
     }, []);
 
 
-    const line1 = useTransform(scrollYProgress, [0, 0.3], isMobile ? ['-100vw', '10vw'] : ['-100vw', '40vw']);
-    const line2 = useTransform(scrollYProgress, [0, 0.3], isMobile ? ['100vw', '-10vw'] : ['150vw', '40vw']);
+    const cards = useTransform(scrollYProgress, isMobile ? [0, 0.2] : [0, 0.5], isMobile ? ['0vw', '-100vw'] : ['10vw', '-50vw']);
     return (
         <>
             {/* Border */}
             <hr className="border-b-2" />
-            <section id="menu" className="max-[375px]:mt-[200px] relative">
-                <div className="min-[1000px:]flex min-[1000px]:flex-row max-sm:flex-col min-[1000px]:justify-center min-[1000px]:items-center gap-3">
-                    <motion.div className={""} style={{ x: line1 }}>
-                        <Image src={line} alt={"line1"} width={300} height={50} />
-                    </motion.div>
-                    <div ref={categoryNavBar} className='max-sm:flex max-sm:overflow-x-auto flex flex-row justify-center self-center gap-3'>
-                        <div className="max-sm:overflow-y-hidden">
-                            <nav className='flex flex-row justify-center items-center gap-3 max-sm:gap-0 self-center overflow-hidden h-auto'>
-                                <Button title={"Special Food"} width={157} inView={isSpecialFoodInView} />
-                                <Button title={"Dum Pukht"} width={157} inView={isDumPukhtInView} />
-                                <Button title={"Food Menu"} width={157} inView={isFoodMenuInView} />
-                                <Button title={"BBQ"} width={157} inView={isBBQInView} />
-                                <Button title={"Drink"} width={157} inView={isDrinksInView} />
-                            </nav>
-                        </div>
-
+            <section id="menu" className="max-[375px]:mt-[200px] relative max-sm:w-full">
+                <div className="min-[1000px]:flex min-[1000px]:flex-row max-sm:flex-col min-[1000px]:justify-center min-[1000px]:items-center gap-3">
+                    <div ref={categoryNavBar} className='max-sm:flex min-[1000px]:flex min-[1000px]:flex-row min-[1000px]:justify-center min-[1000px]:self-center gap-3 max-sm:w-auto'>
+                        <motion.div style={{ x: cards }} className="relative flex flex-row">
+                            <div className="flex flex-row items-center justify-center self-center max-sm:mt-[20px]">
+                                <Image src={menu} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
+                                <Image src={menu} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
+                                <Image src={menu} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
+                                <Image src={menu} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
+                                <Image src={menu} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
+                                <Image src={menu} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
+                                <Image src={menu} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
+                                <Image src={menu} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
+                                <Image src={biryani} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
+                                <Image src={rice} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
+                                <Image src={meatRice} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
+                                <Image src={potatoMeat} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
+                                <Image src={chickenBoti} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
+                                <Image src={chickenCurry} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
+                                <Image src={chickenRiceFaham} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
+                                <Image src={chickenRice} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
+                                <Image src={chickenCurry} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
+                                <Image src={muttonKarahi} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
+                                <Image src={falooda} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
+                                <Image src={iceCream} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
+                                <Image src={lassi} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
+                                <Image src={Haleem} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
+                                <Image src={Nihari} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
+                                <Image src={meatRice} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
+                                <Image src={mirinda} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
+                                <Image src={pepsi} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
+                                <Image src={sevenUp} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
+                            </div>
+                        </motion.div>
                         {/* Gets attached once the menu bar starts */}
                         <AnimatePresence>
                             {isSticky && (
                                 <motion.div
                                     ref={categoryNavBar}
-                                    className={`${isMenu && 'fixed top-0 z-50 bg-white'}`}
+                                    className={`${isMenu ? 'fixed top-0 z-50 bg-white max-sm:max-w-full max-sm:overflow-x-auto' : 'bg-white'}`}
                                     initial="initial"
                                     animate="animate"
                                     exit="exit"
                                     variants={navMotionVariants}
                                 >
-                                    <div className="overflow-y-hidden">
-                                        <nav className='flex flex-row justify-center items-center gap-3 self-center overflow-hidden'>
-                                            <Button title={"Special Food"} width={157} inView={isSpecialFoodInView} />
-                                            <Button title={"Dum Pukht"} width={157} inView={isDumPukhtInView} />
-                                            <Button title={"Food Menu"} width={157} inView={isFoodMenuInView} />
-                                            <Button title={"BBQ"} width={157} inView={isBBQInView} />
-                                            <Button title={"Drink"} width={157} inView={isDrinksInView} />
-                                        </nav>
-                                    </div>
+                                    <nav className='flex flex-row justify-center items-center gap-3 self-center w-full max-sm:ml-[130px] max-sm:mt-[10px]' style={{ minWidth: '785px' }}>
+                                        <Button title={"Special Food"} width={157} inView={isSpecialFoodInView} />
+                                        <Button title={"Dum Pukht"} width={157} inView={isDumPukhtInView} />
+                                        <Button title={"Food Menu"} width={157} inView={isFoodMenuInView} />
+                                        <Button title={"BBQ"} width={157} inView={isBBQInView} />
+                                        <Button title={"Drink"} width={157} inView={isDrinksInView} />
+                                    </nav>
                                 </motion.div>
                             )}
                         </AnimatePresence>
                     </div>
-                    <motion.div style={{ x: line2 }}>
-                        <Image src={flippedLine} alt={"line2"} width={300} height={50} />
-                    </motion.div>
                 </div>
             </section>
             <SpecialFoodDishes setInView={setIsSpecialFoodInView} />
