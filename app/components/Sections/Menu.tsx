@@ -146,8 +146,8 @@ export default function Menu() {
                                     exit="exit"
                                     variants={navMotionVariants}
                                 >
-                                    <nav className='flex flex-row justify-center items-center gap-3 self-center w-full max-sm:ml-[130px] max-sm:mt-[10px]' style={{ minWidth: '785px' }}>
-                                        <Button title={"Special Food"} width={157} inView={isSpecialFoodInView} />
+                                    <nav className='flex flex-row justify-center items-center gap-3 self-center w-full max-sm:ml-[130px]' style={{ minWidth: '785px' }}>
+                                        <Button title={"Special Food"} width={130} inView={isSpecialFoodInView} />
                                         <Button title={"Dum Pukht"} width={157} inView={isDumPukhtInView} />
                                         <Button title={"Food Menu"} width={157} inView={isFoodMenuInView} />
                                         <Button title={"BBQ"} width={157} inView={isBBQInView} />
