@@ -117,7 +117,7 @@ export function FoodMenuDishes({ setInView }: any) {
         <div ref={ref}>
             <div id="food menu" className="mt-[100px] justify-center self-center max-sm:flex max-sm:flex-col max-sm:space-y-2 max-sm:justify-center max-sm:items-center">
                 <Dish fullPrice={100} halfPrice={50} title="Mutton Karahi" image={biryani} category="Food Menu" />
-                <Dish fullPrice={60} halfPrice={30} title="Chicken Karahi" image={rice} category="Food Menu" />
+                <Dish fullPrice={60} halfPrice={30} title="Chicken Karahi" image={chickenKarahi} category="Food Menu" />
                 <Dish fullPrice={48} halfPrice={24} title="Chapli Kabab" image={meatRice} category="Food Menu" width={200} height={200} />
                 <Dish fullPrice={70} halfPrice={35} title="Chicken Handi" image={potatoMeat} category="Food Menu" width={200} height={200} />
                 <Dish fullPrice={55} halfPrice={35} title="Fish" image={fish} category="Food Menu" width={200} height={200} />
