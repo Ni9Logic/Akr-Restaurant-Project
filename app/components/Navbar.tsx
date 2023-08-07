@@ -3,7 +3,6 @@ import Image from "next/image";
 import logo from "@/public/images/logos/logo8.svg";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Link } from "react-scroll";
 import Button from "./ui/Button";
 
 export default function NavBar() {
@@ -84,13 +83,13 @@ export default function NavBar() {
                         </div>
                     </div>
                 </div>
-                <div className="mx-auto">
-                    <h1 className="text-3xl font-medium font-mono text-white">
-                        <div className="space-y-3 mb-[100px] justify-start align-baseline">
-                            <Button title="Home" width={157} onClick={() => setOpen(!open)} />
-                            <Button title="Order Online" width={157} onClick={() => setOpen(!open)} />
-                            <Button title="Contact Us" width={157} onClick={() => setOpen(!open)} />
-                            <Button title="Location" width={157} onClick={() => setOpen(!open)} />
+                <div className="grid m-auto w-full">
+                    <h1 className="text-3xl font-medium font-mono text-white w-full">
+                        <div className="space-y-3 flex items-center justify-center flex-col">
+                            <Button title="Home" width={200} style={{ minWidth: '157px' }} onClick={onClose} />
+                            <Button title="Menu" width={200} onClick={onClose} />
+                            <Button title="Contact Us" width={200} onClick={onClose} />
+                            <Button title="Order Online" onClick={onClose} />
                         </div>
                     </h1>
                 </div>
@@ -107,11 +106,12 @@ export default function NavBar() {
                             <Image src={logo} alt="logo" className=" max-[500px]:scale-75 object-contain max-sm:flex max-sm:justify-center max-sm:container" />
                         </a>
                         <div className="flex flex-row mr-2 text-base justify-center font-bold cursor-pointer max-[1357px]:hidden gap-2 transition-all ease-in-out">
-                            <Button title="Home" width={157} onClick={() => setOpen(!open)} />
-                            <Button title="Menu" width={157} onClick={() => setOpen(!open)} />
-                            <Button title="Contact Us" width={157} onClick={() => setOpen(!open)} />
-                            <Button title="Order Online" width={157} onClick={() => setOpen(!open)} />
+                            <Button title="Home" width={157} />
+                            <Button title="Menu" width={157} />
+                            <Button title="Contact Us" width={157} />
+                            <Button title="Order Online" width={157} />
                         </div>
+
                         {/* Hamburger Menu */}
                         {
                             !open &&
