@@ -9,26 +9,18 @@ import rice from "@/public/images/dishes/Rice.png"
 import meatRice from "@/public/images/dishes/meatRice.png";
 import potatoMeat from "@/public/images/dishes/PotatoMeat.png";
 import chickenCurry from "@/public/images/dishes/chickenCurryCanva.svg";
-import daalChanna from "@/public/images/dishes/daalChanna.png";
 import pepsi from "@/public/images/dishes/Pepsi.png";
 import mirinda from "@/public/images/dishes/Mirinda.png";
 import sevenUp from "@/public/images/dishes/7up.png";
 import lassi from "@/public/images/dishes/Lassi.png";
-import dumPukht from "@/public/images/dishes/dumPukht.png";
-import seekhTikka from "@/public/images/dishes/seekhTikka.png";
-import fish from "@/public/images/dishes/fishCanva.svg";
 import chickenBoti from "@/public/images/dishes/chickenBoti.png";
-import meatChanp from "@/public/images/dishes/meatChanp.png";
 import falooda from "@/public/images/dishes/Falooda1.png";
 import muttonKarahi from "@/public/images/dishes/muttonKarahi.svg";
-import chickenKarahi from "@/public/images/dishes/Chicken Karahi.png";
 import iceCream from "@/public/images/dishes/iceCream.png";
 import Haleem from "@/public/images/dishes/Haleem.png";
 import Nihari from "@/public/images/dishes/Nihari.png";
-import Soup from "@/public/images/dishes/soup.png";
 import chickenRice from "@/public/images/dishes/chicken rice.png";
 import chickenRiceFaham from "@/public/images/dishes/chicken rice faham.png";
-import chapliKabab from "@/public/images/dishes/chapli.png";
 
 
 export default function Menu() {
@@ -40,6 +32,7 @@ export default function Menu() {
     const [isMenu, setIsMenu] = useState(false);
 
     useEffect(() => {
+
         if (!isSpecialFoodInView && !isFoodMenuInView && !isDumPukhtInView && !isBBQInView && !isDrinksInView)
             setIsMenu(false);
         else
@@ -96,7 +89,7 @@ export default function Menu() {
     }, []);
 
 
-    const cards = useTransform(scrollYProgress, isMobile ? [0, 0.2] : [0, 0.5], isMobile ? ['0vw', '-100vw'] : ['10vw', '-50vw']);
+    const randomDishesLine = useTransform(scrollYProgress, isMobile ? [0, 0.2] : [0, 0.5], isMobile ? ['0vw', '-100vw'] : ['10vw', '-50vw']);
     return (
         <>
             {/* Border */}
@@ -104,7 +97,7 @@ export default function Menu() {
             <section id="menu" className="max-[375px]:mt-[200px] relative max-sm:w-full">
                 <div className="min-[1000px]:flex min-[1000px]:flex-row max-sm:flex-col min-[1000px]:justify-center min-[1000px]:items-center gap-3">
                     <div ref={categoryNavBar} className='max-sm:flex min-[1000px]:flex min-[1000px]:flex-row min-[1000px]:justify-center min-[1000px]:self-center gap-3 max-sm:w-auto'>
-                        <motion.div style={{ x: cards }} className="relative flex flex-row">
+                        <motion.div style={{ x: randomDishesLine }} className="relative flex flex-row">
                             <div className="flex flex-row items-center justify-center self-center max-sm:mt-[20px]">
                                 <Image src={menu} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
                                 <Image src={menu} alt="menu" width={150} height={150} className="object-contain h-[200px]" />
@@ -145,20 +138,32 @@ export default function Menu() {
                                     animate="animate"
                                     exit="exit"
                                     variants={navMotionVariants}
+                                    style={{ overflow: isMobile ? 'auto' : 'hidden'} }
                                 >
-                                    <nav className='flex flex-row justify-center items-center gap-3 self-center w-full max-sm:ml-[130px]' style={{ minWidth: '785px' }}>
-                                        <Button title={"Special Food"} width={130} inView={isSpecialFoodInView} />
-                                        <Button title={"Dum Pukht"} width={157} inView={isDumPukhtInView} />
-                                        <Button title={"Food Menu"} width={157} inView={isFoodMenuInView} />
-                                        <Button title={"BBQ"} width={157} inView={isBBQInView} />
-                                        <Button title={"Drink"} width={157} inView={isDrinksInView} />
-                                    </nav>
+                                    {isMobile ?
+                                        <nav className='flex flex-row justify-center items-center gap-3 max-sm:gap-0 w-full' style={{ minWidth: '785px' }}>
+                                            <Button id="specialFoods" title={"Special Food"} width={157} inView={isSpecialFoodInView} />
+                                            <Button id="foodMenus" title={"Food Menu"} width={157} inView={isFoodMenuInView} />
+                                            <Button id="dumPukhts" title={"Dum Pukht"} width={157} inView={isDumPukhtInView} />
+                                            <Button id="BBQS" title={"BBQ"} width={157} inView={isBBQInView} />
+                                            <Button id="DRINKSS" title={"Drink"} width={157} inView={isDrinksInView} />
+                                        </nav>
+                                        :
+                                        <nav className='flex flex-row justify-center items-center gap-3 w-full'>
+                                            <Button id="specialFoods" title={"Special Food"} width={157} inView={isSpecialFoodInView} />
+                                            <Button id="foodMenus" title={"Food Menu"} width={157} inView={isFoodMenuInView} />
+                                            <Button id="dumPukhts" title={"Dum Pukht"} width={157} inView={isDumPukhtInView} />
+                                            <Button id="BBQS" title={"BBQ"} width={157} inView={isBBQInView} />
+                                            <Button id="DRINKSS" title={"Drink"} width={157} inView={isDrinksInView} />
+                                        </nav>
+                                    }
+
                                 </motion.div>
                             )}
                         </AnimatePresence>
                     </div>
                 </div>
-            </section>
+            </section >
             <SpecialFoodDishes setInView={setIsSpecialFoodInView} />
             <FoodMenuDishes setInView={setIsFoodMenuInView} />
             <DumPukht setInView={setDumPuktInView} />

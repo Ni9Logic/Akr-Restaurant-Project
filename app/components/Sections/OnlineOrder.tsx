@@ -45,7 +45,7 @@ export default function OrderOnline() {
                                 {/* Images */}
                                 <div id="phoneMockup grid grid-rows-2">
                                     <div className="bg-[#EA0029] h-[282px]">
-                                        <Image src={Jahez} alt="Jahez Logo" className="w-full h-full" />
+                                        <Image src={Jahez} alt="Jahez Logo" className="w-full h-full"/>
                                     </div>
                                     <div className="bg-blue-500 h-[290px]">
                                         <Image src={HungerStation} alt="Hunger Station Logo" className="h-full w-full" />

@@ -61,24 +61,24 @@ export default function SpecialFoodDishes({ setInView }: any) {
     return isMobile ?
         <div ref={ref}>
             <div id="special food" className="mt-[100px] justify-center self-center max-sm:flex max-sm:flex-col max-sm:space-y-2 max-sm:justify-center max-sm:items-center">
-                <Dish fullPrice={20} halfPrice={10} title="Biryani" image={biryani} category="Special Food" />
-                <Dish fullPrice={38} halfPrice={19} title="Rice" image={rice} category="Special Food" />
-                <Dish fullPrice={50} halfPrice={25} title="Meat Rice" image={meatRice} category="Special Food" width={200} height={200} />
-                <Dish fullPrice={12} halfPrice={7} title="Potato Meat" image={potatoMeat} category="Special Food" width={200} height={200} />
-                <Dish fullPrice={12} halfPrice={7} title="Chkicken Curry" image={chickenCurry} category="Special Food" width={200} height={200} className="h-[200px]" />
-                <Dish fullPrice={5} halfPrice={10} title="Daal Channa" image={daalChanna} category="Special Food" width={200} height={200} className="h-[200px]" />
+                <Dish fullPrice={"Full 20"} halfPrice={"Half 10"} title="Biryani" image={biryani} category="Special Food" />
+                <Dish fullPrice={"Full 38"} halfPrice={"Half 19"} title="Rice" image={rice} category="Special Food" />
+                <Dish fullPrice={"Full 50"} halfPrice={"Half 25"} title="Meat Rice" image={meatRice} category="Special Food" width={200} height={200} />
+                <Dish fullPrice={"Full 12"} halfPrice={"Half 7"} title="Potato Meat" image={potatoMeat} category="Special Food" width={200} height={200} />
+                <Dish fullPrice={"Full 12"} halfPrice={"Half 7"} title="Chkicken Curry" image={chickenCurry} category="Special Food" width={200} height={200} className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 5"} halfPrice={"Half 10"} title="Daal Channa" image={daalChanna} category="Special Food" width={200} height={200} className="h-[200px]" />
             </div >
         </div>
         :
         <div ref={ref}>
             <motion.div ref={targetRef} id="special food" className="grid grid-cols-3 container items-center mt-[100px] justify-center self-center max-sm:flex max-sm:flex-col max-sm:space-y-2"
                 style={{ scale: scaleProgress, opacity: opacityProgress }}>
-                <Dish fullPrice={20} halfPrice={10} title="Biryani" image={biryani} category="Special Food" />
-                <Dish fullPrice={38} halfPrice={19} title="Rice" image={rice} category="Special Food" />
-                <Dish fullPrice={50} halfPrice={25} title="Meat Rice" image={meatRice} category="Special Food" width={200} height={200} />
-                <Dish fullPrice={12} halfPrice={7} title="Potato Meat" image={potatoMeat} category="Special Food" width={200} height={200} className="h-[200px] object-contain" />
-                <Dish fullPrice={12} halfPrice={7} title="Chkicken Curry" image={chickenCurry} category="Special Food" width={200} height={200} className="h-[200px]" />
-                <Dish fullPrice={5} halfPrice={10} title="Daal Channa" image={daalChanna} category="Special Food" width={200} height={200} />
+                <Dish fullPrice={"Full 20"} halfPrice={"Half 10"} title="Biryani" image={biryani} category="Special Food" />
+                <Dish fullPrice={"Full 38"} halfPrice={"Half 19"} title="Rice" image={rice} category="Special Food" />
+                <Dish fullPrice={"Full 50"} halfPrice={"Half 25"} title="Meat Rice" image={meatRice} category="Special Food" width={200} height={200} />
+                <Dish fullPrice={"Full 12"} halfPrice={"Half 7"} title="Potato Meat" image={potatoMeat} category="Special Food" width={200} height={200} />
+                <Dish fullPrice={"Full 12"} halfPrice={"Half 7"} title="Chkicken Curry" image={chickenCurry} category="Special Food" width={200} height={200} className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 5"} halfPrice={"Half 10"} title="Daal Channa" image={daalChanna} category="Special Food" width={200} height={200} className="h-[200px]" />
             </motion.div>
         </div>
 }
@@ -116,36 +116,36 @@ export function FoodMenuDishes({ setInView }: any) {
     return isMobile ?
         <div ref={ref}>
             <div id="food menu" className="mt-[100px] justify-center self-center max-sm:flex max-sm:flex-col max-sm:space-y-2 max-sm:justify-center max-sm:items-center">
-                <Dish fullPrice={100} halfPrice={50} title="Mutton Karahi" image={biryani} category="Food Menu" />
-                <Dish fullPrice={60} halfPrice={30} title="Chicken Karahi" image={chickenKarahi} category="Food Menu" />
-                <Dish fullPrice={48} halfPrice={24} title="Chapli Kabab" image={meatRice} category="Food Menu" width={200} height={200} />
-                <Dish fullPrice={70} halfPrice={35} title="Chicken Handi" image={potatoMeat} category="Food Menu" width={200} height={200} />
-                <Dish fullPrice={55} halfPrice={35} title="Fish" image={fish} category="Food Menu" width={200} height={200} />
-                <Dish fullPrice={10} halfPrice={5} title="Daal Mash" image={daalChanna} category="Food Menu" width={200} height={200} />
-                <Dish fullPrice={15} halfPrice={8} title="Haleem" image={Haleem} category="Food Menu" width={200} height={200} />
-                <Dish fullPrice={15} halfPrice={8} title="Nihari" image={Nihari} category="Food Menu" width={200} height={200} />
-                <Dish fullPrice={10} halfPrice={5} title="Soup" image={Soup} category="Food Menu" width={200} height={200} />
-                <Dish fullPrice={15} halfPrice={15} title="Charsad Waali Rice" image={daalChanna} category="Food Menu" width={200} height={200} />
-                <Dish fullPrice={40} halfPrice={20} title="Chicken Rice Faham" image={chickenRiceFaham} category="Food Menu" width={200} height={200} />
-                <Dish fullPrice={38} halfPrice={19} title="Chicken Rice" image={chickenRice} category="Food Menu" width={200} height={200} />
+                <Dish fullPrice={"Full 100"} halfPrice={"Half 50"} title="Mutton Karahi" image={muttonKarahi} category="Food Menu" className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 60"} halfPrice={"Half 30"} title="Chicken Karahi" image={chickenKarahi} category="Food Menu" className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 48"} halfPrice={"Half 24"} title="Chapli Kabab" image={chapliKabab} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 70"} halfPrice={"Half 35"} title="Chicken Handi" image={potatoMeat} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 55"} halfPrice={"Half 35"} title="Fish" image={fish} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 10"} halfPrice={"Half 5"} title="Daal Mash" image={daalChanna} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 15"} halfPrice={"Half 8"} title="Haleem" image={Haleem} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 15"} halfPrice={"Half 8"} title="Nihari" image={Nihari} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 10"} halfPrice={"Half 5"} title="Soup" image={Soup} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 15"} halfPrice={"Half 15"} title="Charsad Waali Rice" image={daalChanna} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 40"} halfPrice={"Half 20"} title="Chicken Rice Faham" image={chickenRiceFaham} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 38"} halfPrice={"Half 19"} title="Chicken Rice" image={chickenRice} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
             </div >
         </div>
         :
         <div ref={ref}>
             <motion.div ref={targetRef} id="food menu" className="grid grid-cols-3 container items-center mt-[100px] justify-center self-center max-sm:flex max-sm:flex-col max-sm:space-y-2"
                 style={{ scale: scaleProgress, opacity: opacityProgress }}>
-                <Dish fullPrice={100} halfPrice={50} title="Mutton Karahi" image={muttonKarahi} category="Food Menu" className="h-[200px] object-contain" />
-                <Dish fullPrice={60} halfPrice={30} title="Chicken Karahi" image={chickenKarahi} category="Food Menu" className="h-[200px] object-contain" />
-                <Dish fullPrice={48} halfPrice={24} title="Chapli Kabab" image={chapliKabab} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
-                <Dish fullPrice={70} halfPrice={35} title="Chicken Handi" image={potatoMeat} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
-                <Dish fullPrice={55} halfPrice={35} title="Fish" image={fish} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
-                <Dish fullPrice={10} halfPrice={5} title="Daal Mash" image={daalChanna} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
-                <Dish fullPrice={15} halfPrice={8} title="Haleem" image={Haleem} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
-                <Dish fullPrice={15} halfPrice={8} title="Nihari" image={Nihari} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
-                <Dish fullPrice={10} halfPrice={5} title="Soup" image={Soup} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
-                <Dish fullPrice={15} halfPrice={15} title="Charsad Waali Rice" image={daalChanna} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
-                <Dish fullPrice={40} halfPrice={20} title="Chicken Rice Faham" image={chickenRiceFaham} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
-                <Dish fullPrice={38} halfPrice={19} title="Chicken Rice" image={chickenRice} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 100"} halfPrice={"Half 50"} title="Mutton Karahi" image={muttonKarahi} category="Food Menu" className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 60"} halfPrice={"Half 30"} title="Chicken Karahi" image={chickenKarahi} category="Food Menu" className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 48"} halfPrice={"Half 24"} title="Chapli Kabab" image={chapliKabab} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 70"} halfPrice={"Half 35"} title="Chicken Handi" image={potatoMeat} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 55"} halfPrice={"Half 35"} title="Fish" image={fish} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 10"} halfPrice={"Half 5"} title="Daal Mash" image={daalChanna} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 15"} halfPrice={"Half 8"} title="Haleem" image={Haleem} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 15"} halfPrice={"Half 8"} title="Nihari" image={Nihari} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 10"} halfPrice={"Half 5"} title="Soup" image={Soup} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 15"} halfPrice={"Half 15"} title="Charsad Waali Rice" image={daalChanna} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 40"} halfPrice={"Half 20"} title="Chicken Rice Faham" image={chickenRiceFaham} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 38"} halfPrice={"Half 19"} title="Chicken Rice" image={chickenRice} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
             </motion.div>
         </div>
 }
@@ -183,16 +183,16 @@ export function DumPukht({ setInView }: any) {
     return isMobile ?
         <div ref={ref}>
             <div id="dum pukht" className="mt-[100px] justify-center self-center max-sm:flex max-sm:flex-col max-sm:space-y-2 max-sm:justify-center max-sm:items-center">
-                <Dish fullPrice={600} halfPrice={600} title="Half Dum Puhkt" image={dumPukht} category="Dum Pukht" className="h-[200px]" />
-                <Dish fullPrice={1150} halfPrice={1150} title="Full Dum Puhkt" image={dumPukht} category="Dum Pukht" className="h-[200px]" />
+                <Dish fullPrice={600} title="Half Dum Puhkt" image={dumPukht} category="Dum Pukht" className="h-[200px]" />
+                <Dish fullPrice={1150} title="Full Dum Puhkt" image={dumPukht} category="Dum Pukht" className="h-[200px]" />
             </div >
         </div>
         :
         <div ref={ref}>
             <motion.div ref={targetRef} id="dum pukht" className="grid grid-cols-3 container items-center mt-[100px] justify-center self-center max-sm:flex max-sm:flex-col max-sm:space-y-2"
                 style={{ scale: scaleProgress, opacity: opacityProgress }}>
-                <Dish fullPrice={600} halfPrice={600} title="Half Dum Puhkt" image={dumPukht} category="Dum Pukht" className="h-[200px] object-contain" />
-                <Dish fullPrice={1150} halfPrice={1150} title="Full Dum Puhkt" image={dumPukht} category="Dum Pukht" className="h-[200px] object-contain" />
+                <Dish fullPrice={600} title="Half Dum Puhkt" image={dumPukht} category="Dum Pukht" className="h-[200px] object-contain" />
+                <Dish fullPrice={1150} title="Full Dum Puhkt" image={dumPukht} category="Dum Pukht" className="h-[200px] object-contain" />
             </motion.div>
         </div>
 }
