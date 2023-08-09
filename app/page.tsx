@@ -7,7 +7,6 @@ import Menu from "./components/Sections/Menu";
 import OrderOnline from "./components/Sections/OnlineOrder";
 import Hero from "./components/Sections/Hero";
 import Testimonials from "./components/Sections/Locations";
-import Hero2 from "./components/Sections/Hero2";
 
 export default function Home() {
 

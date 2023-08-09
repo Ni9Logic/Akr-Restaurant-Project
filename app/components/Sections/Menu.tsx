@@ -138,7 +138,7 @@ export default function Menu() {
                                     animate="animate"
                                     exit="exit"
                                     variants={navMotionVariants}
-                                    style={{ overflow: isMobile ? 'auto' : 'hidden'} }
+                                    style={{ overflow: isMobile ? 'auto' : 'hidden' }}
                                 >
                                     {isMobile ?
                                         <nav className='flex flex-row justify-center items-center gap-3 max-sm:gap-0 w-full' style={{ minWidth: '785px' }}>

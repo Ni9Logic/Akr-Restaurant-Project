@@ -9,6 +9,11 @@ export default function NavBar() {
     const router = useRouter();
     const [open, setOpen] = useState(false);
 
+    const handleButtonClick = (e: any) => {
+        e.stopPropagation(); // Prevent event from bubbling up
+        setOpen(false); // Close the modal
+    }
+
 
     // To check for scrolling
     const [isScrolled, setIsScrolled] = useState(false);
@@ -86,7 +91,7 @@ export default function NavBar() {
                 <div className="grid m-auto w-full">
                     <h1 className="text-3xl font-medium font-mono text-white w-full">
                         <div className="space-y-3 flex items-center justify-center flex-col">
-                            <Button title="Home" width={200} style={{ minWidth: '157px' }} onClick={onClose} />
+                            <Button title="Home" width={200} onClick={() => setOpen(false)} />
                             <Button title="Menu" width={200} onClick={onClose} />
                             <Button title="Contact Us" width={200} onClick={onClose} />
                             <Button title="Order Online" onClick={onClose} />
