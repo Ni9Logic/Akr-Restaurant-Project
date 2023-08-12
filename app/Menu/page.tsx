@@ -14,7 +14,6 @@ const Page = () => {
                 <h1 className="flex items-center justify-center text-3xl font-serif ">
                     <Image src={menuLogo} alt="MenuLogo" className="w-full"/>
                 </h1>
-                <h1 className="flex items-center justify-center text-3xl font-serif">AKR RESTAURANT</h1>
                 <Image src={logo} alt="logo" width={150} height={300} className="object-contain"/>
             </div>
             <Menu />
