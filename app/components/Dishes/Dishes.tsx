@@ -93,7 +93,7 @@ export default function SpecialFoodDishes({ setInView }: any) {
                 <Dish fullPrice={"Full 50"} halfPrice={"Half 25"} title="Matka Biryani" category="Special Food" width={200} height={200} className="h-[200px]" />
                 <Dish fullPrice={"40"} title="Murgh Roast" category="Special Food" width={200} height={200} className="h-[200px]" />
 
-
+{/*testing */}
             </motion.div>
         </div>
 }
