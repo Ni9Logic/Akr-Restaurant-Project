@@ -29,6 +29,8 @@ import chapliKabab from "@/public/images/dishes/chapli.png";
 import daalMaash from "@/public/images/dishes/daalMash.png";
 import SeekhKabab from "@/public/images/dishes/SeekhKabab.png";
 import BanuBeefPulao from "@/public/images/dishes/BanuBeefPulao.png";
+import MatkaBiryani from "@/public/images/dishes/MatkaBiryani.png";
+import MurghRoast from "@/public/images/dishes/MurghRoast.png";
 
 
 export default function SpecialFoodDishes({ setInView }: any) {
@@ -74,8 +76,8 @@ export default function SpecialFoodDishes({ setInView }: any) {
                 <Dish fullPrice={"Full 12"} halfPrice={"Half 7"} title="Potato Meat" image={potatoMeat} category="Special Food" width={200} height={200} />
                 <Dish fullPrice={"Full 12"} halfPrice={"Half 7"} title="Chkicken Curry" image={chickenCurry} category="Special Food" width={200} height={200} className="h-[200px] object-contain" />
                 <Dish fullPrice={"30"} title="Banu Beef Pulao" category="Special Food" image={BanuBeefPulao} width={200} height={200} className="h-[200px] object-contain" />
-                <Dish fullPrice={"Full 50"} halfPrice={"Half 25"} title="Matka Biryani" category="Special Food" width={200} height={200} className="h-[200px]" />
-                <Dish fullPrice={"40"} title="Murgh Roast" category="Special Food" width={200} height={200} className="h-[200px]" />
+                <Dish fullPrice={"Full 50"} halfPrice={"Half 25"} title="Matka Biryani" image={MatkaBiryani} category="Special Food" width={200} height={200} className="h-[200px]" />
+                <Dish fullPrice={"40"} title="Murgh Roast" category="Special Food" image={MurghRoast} width={200} height={200} className="h-[200px]" />
 
             </motion.div >
         </div>
@@ -90,8 +92,8 @@ export default function SpecialFoodDishes({ setInView }: any) {
                 <Dish fullPrice={"Full 12"} halfPrice={"Half 7"} title="Chkicken Curry" image={chickenCurry} category="Special Food" width={200} height={200} className="h-[200px] object-contain" />
                 <Dish fullPrice={"Full 5"} halfPrice={"Half 10"} title="Daal Channa" image={daalChanna} category="Special Food" width={200} height={200} className="h-[200px]" />
                 <Dish fullPrice={"30"} title="Banu Beef Pulao" category="Special Food" image={BanuBeefPulao} width={200} height={200} className="h-[200px] object-contain" />
-                <Dish fullPrice={"Full 50"} halfPrice={"Half 25"} title="Matka Biryani" category="Special Food" width={200} height={200} className="h-[200px]" />
-                <Dish fullPrice={"40"} title="Murgh Roast" category="Special Food" width={200} height={200} className="h-[200px]" />
+                <Dish fullPrice={"Full 50"} halfPrice={"Half 25"} title="Matka Biryani" image={MatkaBiryani} category="Special Food" width={200} height={200} className="h-[200px]" />
+                <Dish fullPrice={"40"} title="Murgh Roast" category="Special Food" image={MurghRoast} width={200} height={200} className="h-[200px]" />
 
 {/*testing */}
             </motion.div>
@@ -208,7 +210,7 @@ export function DumPukht({ setInView }: any) {
                 </div>
                 <Dish fullPrice={600} title="Half Dum Puhkt" image={dumPukht} category="Dum Pukht" className="h-[200px]" />
                 <Dish fullPrice={1150} title="Full Dum Puhkt" image={dumPukht} category="Dum Pukht" className="h-[200px]" />
-                <Dish fullPrice={120} halfPrice={60} title="Platter" category="Dum Pukht" className="h-[200px]" />
+                <Dish fullPrice={120} halfPrice={60} title="Platter" image={dumPukht} category="Dum Pukht" className="h-[200px]" />
             </motion.div >
         </div>
         :
@@ -217,7 +219,7 @@ export function DumPukht({ setInView }: any) {
                 style={{ scale: scaleProgress, opacity: opacityProgress }}>
                 <Dish fullPrice={600} title="Half Dum Puhkt" image={dumPukht} category="Dum Pukht" className="h-[200px] object-contain" />
                 <Dish fullPrice={1150} title="Full Dum Puhkt" image={dumPukht} category="Dum Pukht" className="h-[200px] object-contain" />
-                <Dish fullPrice={120} halfPrice={60} title="Platter" category="Dum Pukht" className="h-[200px] object-contain" />
+                <Dish fullPrice={120} halfPrice={60} title="Platter" image={dumPukht} category="Dum Pukht" className="h-[200px] object-contain" />
 
             </motion.div>
         </div>

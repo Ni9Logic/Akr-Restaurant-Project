@@ -148,7 +148,7 @@ export default function Menu() {
                                             <Button id="dumPukhts" title={"Dum Pukht"} width={157} inView={isDumPukhtInView} />
                                             <Button id="BBQS" title={"BBQ"} width={157} inView={isBBQInView} />
                                             <Button id="DRINKSS" title={"Drink"} width={157} inView={isDrinksInView} />
-                                            <Button id="IceCream" title={"Ice Cream"} width={157} inView={isIceCreamInView} />
+                                            <Button id="ice cream" title={"Ice Cream"} width={157} inView={isIceCreamInView} />
                                         </nav>
                                         :
                                         <nav className='flex flex-row justify-center items-center gap-3 w-full'>
