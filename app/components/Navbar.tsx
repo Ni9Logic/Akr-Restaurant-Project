@@ -108,7 +108,7 @@ export default function NavBar() {
                 <div className="items-center justify-between">
                     <div className="mx-auto flex flex-row justify-between text-center items-center">
                         <a className="cursor-pointer" onClick={() => router.push('/')}>
-                            <Image src={logo} alt="logo" className=" max-[500px]:scale-75 object-contain max-sm:flex max-sm:justify-center max-sm:container" />
+                            <Image src={logo} alt="logo" className=" max-[500px]:scale-100 max-sm:flex max-sm:justify-center max-sm:container object-contain" />
                         </a>
                         <div className="flex flex-row mr-2 text-base justify-center font-bold cursor-pointer max-[1357px]:hidden gap-2 transition-all ease-in-out">
                             <Button title="Home" width={157} />

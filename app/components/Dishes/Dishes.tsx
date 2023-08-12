@@ -95,7 +95,6 @@ export default function SpecialFoodDishes({ setInView }: any) {
                 <Dish fullPrice={"Full 50"} halfPrice={"Half 25"} title="Matka Biryani" image={MatkaBiryani} category="Special Food" width={200} height={200} className="h-[200px]" />
                 <Dish fullPrice={"40"} title="Murgh Roast" category="Special Food" image={MurghRoast} width={200} height={200} className="h-[200px]" />
 
-{/*testing */}
             </motion.div>
         </div>
 }
@@ -368,9 +367,8 @@ export function IceCream({ setInView }: any) {
     }, []);
 
     return isMobile ?
-        <div ref={ref}>
-
-            <motion.div id="drink" className="mt-[100px] justify-center self-center max-sm:flex max-sm:flex-col max-sm:space-y-2 max-sm:justify-center max-sm:items-center"
+        <div ref={ref} id="ice cream">
+            <motion.div id="ice cream" className="mt-[100px] justify-center self-center max-sm:flex max-sm:flex-col max-sm:space-y-2 max-sm:justify-center max-sm:items-center"
                 style={{ scale: scaleProgress, opacity: opacityProgress }}>
                 <div className="flex items-center justify-center mt-[5vh]">
                     <h1 className="text-3xl font-sans leading-relaxed">ICE CREAMS</h1>
@@ -380,8 +378,8 @@ export function IceCream({ setInView }: any) {
             </motion.div >
         </div>
         :
-        <div ref={ref}>
-            <motion.div ref={targetRef} id="drink" className="grid grid-cols-3 container items-center mt-[100px] justify-center self-center max-sm:flex max-sm:flex-col max-sm:space-y-2"
+        <div ref={ref} id="ice cream">
+            <motion.div ref={targetRef} id="ice cream" className="grid grid-cols-3 container items-center mt-[100px] justify-center self-center max-sm:flex max-sm:flex-col max-sm:space-y-2"
                 style={{ scale: scaleProgress, opacity: opacityProgress }}>
                 <Dish fullPrice={"Large 10"} halfPrice={"Small 6"} title="Ice Cream" image={iceCream} category="Drink" width={200} height={200} className="h-[200px] object-contain" />
                 <Dish fullPrice={15} title="Falooda Special" image={falooda} category="Drink" width={200} height={200} className="h-[200px] object-contain" />
