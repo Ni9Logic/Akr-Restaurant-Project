@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
-import SpecialFoodDishes, { BBQ, Drink, DumPukht, FoodMenuDishes } from "../Dishes/Dishes";
+import SpecialFoodDishes, { BBQ, Drink, DumPukht, FoodMenuDishes, IceCream } from "../Dishes/Dishes";
 import { useEffect, useRef, useState } from "react";
 import menu from "@/public/images/assets/menuu.png";
 import Button from "../ui/Button";
@@ -29,11 +29,12 @@ export default function Menu() {
     const [isDumPukhtInView, setDumPuktInView] = useState(false);
     const [isBBQInView, setBBQInView] = useState(false);
     const [isDrinksInView, setDrinkInView] = useState(false);
+    const [isIceCreamInView, setIceCreamInView] = useState(false);
     const [isMenu, setIsMenu] = useState(false);
 
     useEffect(() => {
 
-        if (!isSpecialFoodInView && !isFoodMenuInView && !isDumPukhtInView && !isBBQInView && !isDrinksInView)
+        if (!isSpecialFoodInView && !isFoodMenuInView && !isDumPukhtInView && !isBBQInView && !isDrinksInView && !isIceCreamInView)
             setIsMenu(false);
         else
             setIsMenu(true);
@@ -141,12 +142,13 @@ export default function Menu() {
                                     style={{ overflow: isMobile ? 'auto' : 'hidden' }}
                                 >
                                     {isMobile ?
-                                        <nav className='flex flex-row justify-center items-center gap-3 max-sm:gap-0 w-full' style={{ minWidth: '785px' }}>
+                                        <nav className='flex flex-row justify-center items-center gap-3 max-sm:gap-0 w-full' style={{ minWidth: '945px' }}>
                                             <Button id="specialFoods" title={"Special Food"} width={157} inView={isSpecialFoodInView} />
                                             <Button id="foodMenus" title={"Food Menu"} width={157} inView={isFoodMenuInView} />
                                             <Button id="dumPukhts" title={"Dum Pukht"} width={157} inView={isDumPukhtInView} />
                                             <Button id="BBQS" title={"BBQ"} width={157} inView={isBBQInView} />
                                             <Button id="DRINKSS" title={"Drink"} width={157} inView={isDrinksInView} />
+                                            <Button id="IceCream" title={"Ice Cream"} width={157} inView={isIceCreamInView} />
                                         </nav>
                                         :
                                         <nav className='flex flex-row justify-center items-center gap-3 w-full'>
@@ -155,6 +157,7 @@ export default function Menu() {
                                             <Button id="dumPukhts" title={"Dum Pukht"} width={157} inView={isDumPukhtInView} />
                                             <Button id="BBQS" title={"BBQ"} width={157} inView={isBBQInView} />
                                             <Button id="DRINKSS" title={"Drink"} width={157} inView={isDrinksInView} />
+                                            <Button id="ice cream" title={"Ice Cream"} width={157} inView={isIceCreamInView} />
                                         </nav>
                                     }
 
@@ -169,6 +172,7 @@ export default function Menu() {
             <DumPukht setInView={setDumPuktInView} />
             <BBQ setInView={setBBQInView} />
             <Drink setInView={setDrinkInView} />
+            <IceCream setInView={setIceCreamInView} />
             <div className="mb-[20px]" />
         </>
     )

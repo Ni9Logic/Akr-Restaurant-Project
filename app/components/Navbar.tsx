@@ -91,10 +91,10 @@ export default function NavBar() {
                 <div className="grid m-auto w-full">
                     <h1 className="text-3xl font-medium font-mono text-white w-full">
                         <div className="space-y-3 flex items-center justify-center flex-col">
-                            <Button title="Home" width={200} onClick={() => setOpen(false)} />
-                            <Button title="Menu" width={200} onClick={onClose} />
-                            <Button title="Contact Us" width={200} onClick={onClose} />
-                            <Button title="Order Online" onClick={onClose} />
+                            <Button title="Home" width={200} onClick={handleButtonClick} />
+                            <Button title="Menu" width={200} onClick={() => setOpen(false)} />
+                            <Button title="Contact Us" width={200} onClick={() => setOpen(false)} />
+                            <Button title="Order Online" onClick={() => setOpen(false)} />
                         </div>
                     </h1>
                 </div>
@@ -152,7 +152,10 @@ export default function NavBar() {
                     </div>
                 </div>
             </nav >
-            <FullScreenModal isOpen={open} onClose={() => setOpen(false)} />
+            {
+                open && 
+                <FullScreenModal isOpen={open} onClose={() => setOpen(false)} />
+            }
 
         </>
     )
