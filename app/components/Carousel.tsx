@@ -1,6 +1,6 @@
-import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import 'tailwindcss/tailwind.css';
+import { Carousel } from 'react-responsive-carousel';
 import Image from "next/image";
 import biryani from "@/public/images/dishes/biryaniCanva.svg";
 import fish from "@/public/images/dishes/fishCanva.svg";
