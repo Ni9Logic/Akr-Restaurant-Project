@@ -23,7 +23,7 @@ import iceCream from "@/public/images/dishes/iceCream.png";
 import Haleem from "@/public/images/dishes/Haleem.png";
 import Nihari from "@/public/images/dishes/Nihari.png";
 import Soup from "@/public/images/dishes/soup.png";
-import chickenRice from "@/public/images/dishes/chicken rice.png";
+import chickenRice from "@/public/images/dishes/chickenrice2.jpeg";
 import chickenRiceFaham from "@/public/images/dishes/chicken rice faham.png";
 import chapliKabab from "@/public/images/dishes/chapli.png";
 import daalMaash from "@/public/images/dishes/daalMash.png";
@@ -31,7 +31,7 @@ import SeekhKabab from "@/public/images/dishes/SeekhKabab.png";
 import BanuBeefPulao from "@/public/images/dishes/BanuBeefPulao.png";
 import MatkaBiryani from "@/public/images/dishes/MatkaBiryani.png";
 import MurghRoast from "@/public/images/dishes/MurghRoast.png";
-
+import CharsadWaliRice from "@/public/images/dishes/charsadwalirice1.jpeg";
 
 export default function SpecialFoodDishes({ setInView }: any) {
     const ref = useRef(null);
@@ -145,9 +145,9 @@ export function FoodMenuDishes({ setInView }: any) {
                 <Dish fullPrice={"Full 15"} halfPrice={"Half 8"} title="Haleem" image={Haleem} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
                 <Dish fullPrice={"Full 15"} halfPrice={"Half 8"} title="Nihari" image={Nihari} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
                 <Dish fullPrice={"Full 10"} halfPrice={"Half 5"} title="Soup" image={Soup} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
-                <Dish fullPrice={"Full 15"} halfPrice={"Half 15"} title="Charsad Waali Rice" image={daalChanna} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 15"} halfPrice={"Half 15"} title="Charsad Waali Rice" image={CharsadWaliRice} category="Food Menu" width={200} height={200} className="object-contain mt-[20px]" />
                 <Dish fullPrice={"Full 40"} halfPrice={"Half 20"} title="Chicken Rice Faham" image={chickenRiceFaham} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
-                <Dish fullPrice={"Full 38"} halfPrice={"Half 19"} title="Chicken Rice" image={chickenRice} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 38"} halfPrice={"Half 19"} title="Chicken Rice" image={chickenRice} category="Food Menu" width={200} height={200} className="object-contain mt-[50px]" />
             </motion.div >
         </div>
         :
@@ -163,7 +163,7 @@ export function FoodMenuDishes({ setInView }: any) {
                 <Dish fullPrice={"Full 15"} halfPrice={"Half 8"} title="Haleem" image={Haleem} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
                 <Dish fullPrice={"Full 15"} halfPrice={"Half 8"} title="Nihari" image={Nihari} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
                 <Dish fullPrice={"Full 10"} halfPrice={"Half 5"} title="Soup" image={Soup} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
-                <Dish fullPrice={"Full 15"} halfPrice={"Half 15"} title="Charsad Waali Rice" image={daalChanna} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
+                <Dish fullPrice={"Full 15"} halfPrice={"Half 15"} title="Charsad Waali Rice" image={CharsadWaliRice} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
                 <Dish fullPrice={"Full 40"} halfPrice={"Half 20"} title="Chicken Rice Faham" image={chickenRiceFaham} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
                 <Dish fullPrice={"Full 38"} halfPrice={"Half 19"} title="Chicken Rice" image={chickenRice} category="Food Menu" width={200} height={200} className="h-[200px] object-contain" />
             </motion.div>

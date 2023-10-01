@@ -19,7 +19,7 @@ import muttonKarahi from "@/public/images/dishes/muttonKarahi.svg";
 import iceCream from "@/public/images/dishes/iceCream.png";
 import Haleem from "@/public/images/dishes/Haleem.png";
 import Nihari from "@/public/images/dishes/Nihari.png";
-import chickenRice from "@/public/images/dishes/chicken rice.png";
+import chickenRice from "@/public/images/dishes/chickenrice2.jpeg";
 import chickenRiceFaham from "@/public/images/dishes/chicken rice faham.png";
 
 
